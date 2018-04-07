@@ -9,6 +9,7 @@
 <body>
 	<h1>Add New Person</h1>
 	<form action="${pageContext.request.contextPath}/addNewPerson" method="POST">
+		
 		<input type="text" name="firstName"> <br>
 		<input type="text" name="lastName"> <br>
 		
