@@ -39,7 +39,7 @@ public class BaseController {
 		
 		personService.savePerson(person);
 		
-		return "redirect:/";
+		return "redirect:/persons";
 	}
 	
 	@GetMapping("/persons")
