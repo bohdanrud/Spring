@@ -1,7 +1,10 @@
 package ua.logos.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,5 +40,13 @@ public class BaseController {
 		personService.savePerson(person);
 		
 		return "redirect:/";
+	}
+	
+	@GetMapping("/persons")
+	public String getAllPersons(Model model) {
+		List<Person> persons = personService.findAllPerson();
+		
+		model.addAttribute("personsList", persons);
+		return "person/persons";
 	}
 }
