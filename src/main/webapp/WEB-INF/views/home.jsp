@@ -9,7 +9,7 @@
 <body>
 <h1>Home page</h1>
 	<a href="${pageContext.request.contextPath}/product/add-product">Add Product</a>
-	
+	<a href="${pageContext.request.contextPath}/product/products">Products</a> <br>
 	<a href="${pageContext.request.contextPath}/register">Go to register</a>
 </body>
 </html>

@@ -33,4 +33,10 @@ public class ProductServiceImpl implements ProductService {
 		return productRepository.getOne(id);
 	}
 
+	@Override
+	public void deleteProductById(int id) {
+		// TODO Auto-generated method stub
+		productRepository.deleteById(id);
+	}
+
 }
