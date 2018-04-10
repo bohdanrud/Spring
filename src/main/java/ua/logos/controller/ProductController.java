@@ -81,4 +81,33 @@ public class ProductController {
 		productService.deleteProductById(id);
 		return "redirect:/product/products";
 	}
+	
+	@GetMapping("/edit/{productId}")
+	public String editProductByID(
+			@PathVariable("productId") int Productid,
+			Model model
+			) {
+		model.addAttribute("productModel", productService.findProductById(Productid));
+		return "product/edit";
+	}
+	
+	@PostMapping("/edit-product")
+	public String editProduct(
+			@RequestParam("productName") String productName,
+			@RequestParam("productDescription") String productDescription,
+			@RequestParam("productPrice") String productPrice,
+			@RequestParam("productId") String productIdStr
+			) {
+		System.out.println(">" + productName + " " + productDescription + " " + productPrice);
+		
+		Product product = new Product();
+		product.setId(Integer.valueOf(productIdStr));
+		product.setName(productName);
+		product.setDescription(productDescription);
+		product.setPrice(new BigDecimal(productPrice + ".00"));
+		
+		productService.saveProduct(product);
+		
+		return "redirect:/";
+	}
 }

@@ -17,7 +17,7 @@
 			<th>Price</th>
 			<th></th>
 			<th></th>
-			
+			<th></th>
 		</tr>
 
 		<c:forEach items="${prodictsList}" var="p">
@@ -31,6 +31,10 @@
 				
 				<td>
 				<a href="${pageContext.request.contextPath}/product/del/${p.id}">Delete</a>
+				</td>
+				
+				<td>
+				<a href="${pageContext.request.contextPath}/product/edit/${p.id}">Edit</a>
 				</td>
 				
 			</tr>
