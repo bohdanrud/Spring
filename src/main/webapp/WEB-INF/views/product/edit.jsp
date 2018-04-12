@@ -9,7 +9,7 @@
 <body>
 
 	<form action="${pageContext.request.contextPath}/product/edit-product" method="POST">
-	<input type="hidden" name="productId" value="&{productModel.id}">
+	<input type="hidden" name="productId" value="${productModel.id}">
 		Product Name: <input type="text" name="productName" value="${productModel.name}"> <br> 
 		Product Description: <textarea rows="5" cols="30" name="productDescription">
 		${productModel.description}
