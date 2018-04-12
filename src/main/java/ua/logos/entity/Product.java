@@ -17,7 +17,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Proxy(lazy = false)
+//@Proxy(lazy = false)
 public class Product extends BaseEntity{
 
 	private String name;

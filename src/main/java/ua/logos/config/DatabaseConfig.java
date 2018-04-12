@@ -62,6 +62,8 @@ public class DatabaseConfig {
 		jpaProperties.put("hibernate.show_sql", env.getProperty("spring.jpa.show-sql"));
 		jpaProperties.put("hibernate.format_sql", env.getProperty("spring.jpa.format_sql"));
 
+		// FIX - no sesion
+		jpaProperties.put("hibernate.enable_lazy_load_no_trans", "true");
 		emf.setJpaProperties(jpaProperties);
 		return emf;
 	}
