@@ -49,4 +49,21 @@ public class BaseController {
 		model.addAttribute("personsList", persons);
 		return "person/persons";
 	}
+	
+	@GetMapping("/questionnaire/questionnaire")
+	public String showQuestionnaire() {
+		return "questionnaire/questionnaire";
+	}
+	
+//	@GetMapping("/questionnaire/questions")
+//	public String showQuestions() {
+//		return "questionnaire/questions";
+//	}
+	
+	
+//	@GetMapping("/questionnaire/all-answers")
+//	public String showAnswers() {
+//		return "questionnaire/all-answers";
+//	}
+	
 }

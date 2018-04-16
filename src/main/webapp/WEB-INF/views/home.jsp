@@ -10,6 +10,7 @@
 <h1>Home page</h1>
 	<a href="${pageContext.request.contextPath}/product/add-product">Add Product</a>
 	<a href="${pageContext.request.contextPath}/product/products">Products</a> <br>
-	<a href="${pageContext.request.contextPath}/register">Go to register</a>
+	<a href="${pageContext.request.contextPath}/register">Go to register</a> <br>
+	<a href="${pageContext.request.contextPath}/questionnaire/questionnaire">Questionnaire</a>
 </body>
 </html>
